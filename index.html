@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadt der Zukunft - Schulprojekt 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+    </button>
+
+    <!-- Kopfbereich -->
+    <header class="header">
+        <div class="header-pattern"></div>
+        <div class="header-content">
+            <div class="header-badge">Schulprojekt 2026</div>
+            <h1 class="header-title">Stadt der Zukunft</h1>
+            <p class="header-subtitle">Wie Technologie unsere Stadte von morgen verandert</p>
+        </div>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <main class="main-content">
+        <!-- Einleitung -->
+        <section class="intro-section">
+            <div class="intro-card">
+                <h2>Was ist eine Smart City?</h2>
+                <p>Eine Smart City ist eine Stadt, die digitale Technologien und Datenanalyse nutzt, um die Lebensqualitat ihrer Bewohner zu verbessern, Ressourcen effizienter zu nutzen und Umweltbelastungen zu reduzieren.</p>
+                <p>In diesem Projekt erforschen wir die verschiedenen Aspekte einer Stadt der Zukunft: von intelligenter Mobilitat uber nachhaltige Energie bis hin zu vernetzter Infrastruktur.</p>
+            </div>
+        </section>
+
+        <!-- Themen Ubersicht -->
+        <section class="topics-section">
+            <h2 class="section-title">Unsere Themen</h2>
+            <div class="topics-grid">
+                <article class="topic-card">
+                    <div class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="16" height="16" x="1" y="3" rx="2"/>
+                            <path d="M17 19h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/>
+                            <circle cx="5" cy="19" r="2"/>
+                            <circle cx="13" cy="19" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Intelligente Mobilitat</h3>
+                    <p>Autonome Fahrzeuge, E-Mobilitat und vernetzte Verkehrssysteme fur eine effiziente und umweltfreundliche Fortbewegung.</p>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Smart Energy</h3>
+                    <p>Intelligente Stromnetze, erneuerbare Energien und energieeffiziente Gebaude fur eine nachhaltige Energieversorgung.</p>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>Wohnen der Zukunft</h3>
+                    <p>Smart Homes, vernetzte Gerate und intelligente Gebaudesteuerung fur mehr Komfort und Effizienz.</p>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="2" x2="5" y1="12" y2="12"/>
+                            <line x1="19" x2="22" y1="12" y2="12"/>
+                            <line x1="12" x2="12" y1="2" y2="5"/>
+                            <line x1="12" x2="12" y1="19" y2="22"/>
+                            <circle cx="12" cy="12" r="7"/>
+                        </svg>
+                    </div>
+                    <h3>Vernetzte Infrastruktur</h3>
+                    <p>IoT-Sensoren, digitale Verwaltung und smarte Stadtplanung fur eine effiziente offentliche Infrastruktur.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Detaillierte Infos -->
+        <section class="details-section">
+            <h2 class="section-title">Im Detail</h2>
+            
+            <div class="detail-card">
+                <h3>Intelligente Mobilitat</h3>
+                <div class="detail-text">
+                    <p><strong>Autonome Fahrzeuge:</strong> Selbstfahrende Autos und Busse werden den Verkehr sicherer und effizienter machen. Sie kommunizieren miteinander und vermeiden Unfalle.</p>
+                    <p><strong>E-Mobilitat:</strong> Elektroautos, E-Bikes und E-Scooter reduzieren Emissionen und Larm in der Stadt. Ladestationen sind uberall verfugbar.</p>
+                    <p><strong>Mobility-as-a-Service:</strong> Eine App fur alles - Bus, Bahn, Carsharing und Fahrrad kombiniert fur die optimale Route.</p>
+                    <p><strong>Intelligente Verkehrssteuerung:</strong> KI analysiert Verkehrsstrome in Echtzeit und optimiert Ampelschaltungen, um Staus zu vermeiden.</p>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <h3>Smart Energy</h3>
+                <div class="detail-text">
+                    <p><strong>Smart Grids:</strong> Intelligente Stromnetze verteilen Energie effizient und integrieren erneuerbare Quellen wie Solar und Wind.</p>
+                    <p><strong>Dezentrale Energieerzeugung:</strong> Jedes Gebaude kann mit Solarpanels Strom erzeugen und ins Netz einspeisen.</p>
+                    <p><strong>Energiespeicher:</strong> Grosse Batteriespeicher gleichen Schwankungen bei erneuerbaren Energien aus.</p>
+                    <p><strong>Smart Metering:</strong> Intelligente Zahler zeigen den Verbrauch in Echtzeit und helfen beim Energiesparen.</p>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <h3>Wohnen der Zukunft</h3>
+                <div class="detail-text">
+                    <p><strong>Smart Home:</strong> Heizung, Licht und Gerate werden automatisch gesteuert fur maximalen Komfort und minimalen Verbrauch.</p>
+                    <p><strong>Sprachsteuerung:</strong> Assistenten wie Alexa oder Google Home steuern das ganze Haus per Sprache.</p>
+                    <p><strong>Sicherheit:</strong> Smarte Turschlosser, Kameras und Sensoren schutzen das Zuhause.</p>
+                    <p><strong>Energieeffizienz:</strong> Gebaude erzeugen mehr Energie als sie verbrauchen (Plus-Energie-Hauser).</p>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <h3>Vernetzte Infrastruktur</h3>
+                <div class="detail-text">
+                    <p><strong>IoT-Sensoren:</strong> Tausende Sensoren messen Luftqualitat, Larm, Verkehr und Fullstande von Mulleimern.</p>
+                    <p><strong>Digitale Verwaltung:</strong> Behordengange online erledigen - schnell und papierlos.</p>
+                    <p><strong>Smarte Strassenbeleuchtung:</strong> Laternen passen ihre Helligkeit automatisch an und sparen bis zu 80% Energie.</p>
+                    <p><strong>Predictive Maintenance:</strong> KI erkennt Probleme bei Brucken, Strassen und Gebauden bevor sie entstehen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beispiele aus der Welt -->
+        <section class="examples-section">
+            <h2 class="section-title">Smart Cities weltweit</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h4>Singapur</h4>
+                    <p>Fuhrend bei autonomem Fahren und digitaler Verwaltung. Sensoren uberwachen die ganze Stadt.</p>
+                </div>
+                <div class="example-card">
+                    <h4>Kopenhagen</h4>
+                    <p>Ziel: Klimaneutral bis 2025. Uber 450km Radwege und smarte Ampeln fur Fahrradfahrer.</p>
+                </div>
+                <div class="example-card">
+                    <h4>Barcelona</h4>
+                    <p>IoT-Sensoren fur Mull, Parkplatze und Bewasserung. Offene Daten fur alle Burger.</p>
+                </div>
+                <div class="example-card">
+                    <h4>Wien</h4>
+                    <p>Beste Lebensqualitat weltweit. Smart-City-Strategie mit Burgerbeteiligung.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unser Team -->
+        <section class="team-section">
+            <h2 class="section-title">Unser Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">F</div>
+                    <h4>Fabian</h4>
+                    <p class="team-role">Moderator, Zeitwachter</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #22c55e, #10b981);">D</div>
+                    <h4>David</h4>
+                    <p class="team-role">Moderator, Protokollant</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #a855f7, #ec4899);">K</div>
+                    <h4>Konstantin</h4>
+                    <p class="team-role">Moderator, Materialmanager</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container" class="chatbot-container">
+        <button id="chatbot-toggle" class="chatbot-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+        </button>
+
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="chatbot-avatar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 8V4H8"/>
+                            <rect width="16" height="12" x="4" y="8" rx="2"/>
+                            <path d="M2 14h2"/>
+                            <path d="M20 14h2"/>
+                            <path d="M15 13v2"/>
+                            <path d="M9 13v2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="chatbot-name">KAI - Assistent</span>
+                        <span class="chatbot-status">Online</span>
+                    </div>
+                </div>
+                <button id="chatbot-close" class="chatbot-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="chat-welcome">
+                    <div class="welcome-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 8V4H8"/>
+                            <rect width="16" height="12" x="4" y="8" rx="2"/>
+                            <path d="M2 14h2"/>
+                            <path d="M20 14h2"/>
+                            <path d="M15 13v2"/>
+                            <path d="M9 13v2"/>
+                        </svg>
+                    </div>
+                    <h3>Hallo! Ich bin KAI</h3>
+                    <p>Dein Assistent fur das Thema "Stadt der Zukunft". Frag mich etwas!</p>
+                    <div class="welcome-suggestions">
+                        <button class="suggestion-btn" data-question="Was ist eine Smart City?">Was ist eine Smart City?</button>
+                        <button class="suggestion-btn" data-question="Erzahl mir uber Mobilitat">Mobilitat</button>
+                        <button class="suggestion-btn" data-question="Wer hat dieses Projekt erstellt?">Unser Team</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Frag KAI etwas...">
+                <button id="chatbot-send" class="chatbot-send">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fusszeile -->
+    <footer class="footer">
+        <p>Stadt der Zukunft - Schulprojekt 2026 | Erstellt von Fabian, David & Konstantin</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
