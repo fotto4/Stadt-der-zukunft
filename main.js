@@ -1,4 +1,3 @@
-// Wissensdatenbank fuer den Chatbot
 var wissensdatenbank = {
     smartcity: {
         keywords: ['smart city', 'smart cities', 'smartcity', 'smat city', 'smarte stadt', 'intelligente stadt', 'was ist', 'definition'],
@@ -51,10 +50,8 @@ var wissensdatenbank = {
     }
 };
 
-// Antwort wenn nichts gefunden wird
 var exitAntwort = 'Das Thema liegt leider ausserhalb meines Wissensbereichs.<br><br>Ich kann dir bei folgenden Themen helfen:<br>- Smart Cities allgemein<br>- Mobilitat & Verkehr<br>- Energie & Nachhaltigkeit<br>- Wohnen der Zukunft<br>- Vernetzte Infrastruktur<br><br>Fur andere Themen empfehle ich dir <strong>Google</strong> oder <strong>Wikipedia</strong>.';
 
-// Funktion um aehnliche Woerter zu erkennen (auch bei Tippfehlern)
 function berechneAehnlichkeit(wort1, wort2) {
     var matrix = [];
     for (var i = 0; i <= wort2.length; i++) {
@@ -79,20 +76,18 @@ function berechneAehnlichkeit(wort1, wort2) {
     return matrix[wort2.length][wort1.length];
 }
 
-// Pruefen ob zwei Woerter aehnlich sind
 function sindAehnlich(wort, keyword) {
     if (keyword.includes(wort) || wort.includes(keyword)) return true;
     if (wort.length < 3) return wort === keyword;
     return berechneAehnlichkeit(wort, keyword) <= 2;
 }
 
-// Passende Antwort finden
 function findeAntwort(eingabe) {
-    // Eingabe bereinigen
+   
     var bereinigteEingabe = eingabe.toLowerCase()
-        .replace(/[äÄ]/g, 'a')
-        .replace(/[öÖ]/g, 'o')
-        .replace(/[üÜ]/g, 'u')
+        .replace(/[äÄ]/g, 'ae')
+        .replace(/[öÖ]/g, 'oe')
+        .replace(/[üÜ]/g, 'ue')
         .replace(/[ß]/g, 'ss')
         .replace(/[?!.,]/g, '');
     
@@ -101,21 +96,17 @@ function findeAntwort(eingabe) {
     var besteAntwort = null;
     var hoechstePunkte = 0;
 
-    // Durch alle Themen gehen
     for (var thema in wissensdatenbank) {
         var daten = wissensdatenbank[thema];
         var punkte = 0;
         
-        // Keywords pruefen
         for (var i = 0; i < daten.keywords.length; i++) {
             var keyword = daten.keywords[i];
             
-            // Exakte Uebereinstimmung
             if (bereinigteEingabe.includes(keyword)) {
                 punkte += 10;
             }
             
-            // Wort fuer Wort pruefen
             for (var j = 0; j < woerter.length; j++) {
                 if (sindAehnlich(woerter[j], keyword)) {
                     punkte += 5;
@@ -129,7 +120,6 @@ function findeAntwort(eingabe) {
         }
     }
 
-    // Mindestpunktzahl noetig
     if (hoechstePunkte >= 5) {
         return besteAntwort.antwort;
     }
@@ -137,7 +127,6 @@ function findeAntwort(eingabe) {
     return exitAntwort;
 }
 
-// Chatbot starten wenn Seite geladen ist
 document.addEventListener('DOMContentLoaded', function() {
     var chatToggle = document.getElementById('chatbot-toggle');
     var chatWindow = document.getElementById('chatbot-window');
@@ -147,39 +136,34 @@ document.addEventListener('DOMContentLoaded', function() {
     var chatSend = document.getElementById('chatbot-send');
     var vorschlaege = document.querySelectorAll('.suggestion-btn');
 
-    // Chat oeffnen
     chatToggle.addEventListener('click', function() {
         chatWindow.classList.add('open');
         chatToggle.classList.add('hidden');
         chatInput.focus();
     });
 
-    // Chat schliessen
     chatClose.addEventListener('click', function() {
         chatWindow.classList.remove('open');
         chatToggle.classList.remove('hidden');
     });
 
-    // Nachricht senden
     function sendeNachricht(text) {
         if (!text.trim()) return;
 
-        // Willkommensnachricht ausblenden
+
         var welcome = chatMessages.querySelector('.chat-welcome');
         if (welcome) welcome.style.display = 'none';
 
-        // Benutzer-Nachricht anzeigen
+
         zeigeNachricht(text, 'user');
         chatInput.value = '';
 
-        // Tippen-Animation
         var typingDiv = document.createElement('div');
         typingDiv.className = 'chat-message bot';
         typingDiv.innerHTML = '<div class="message-avatar">KAI</div><div class="typing-indicator"><span></span><span></span><span></span></div>';
         chatMessages.appendChild(typingDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
 
-        // Antwort nach kurzer Pause zeigen
         setTimeout(function() {
             typingDiv.remove();
             var antwort = findeAntwort(text);
@@ -187,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 800 + Math.random() * 600);
     }
 
-    // Nachricht im Chat anzeigen
     function zeigeNachricht(inhalt, typ) {
         var nachrichtDiv = document.createElement('div');
         nachrichtDiv.className = 'chat-message ' + typ;
@@ -202,31 +185,26 @@ document.addEventListener('DOMContentLoaded', function() {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    // HTML Zeichen escapen
     function escapeHtml(text) {
         var div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
     }
 
-    // Senden-Button
     chatSend.addEventListener('click', function() {
         sendeNachricht(chatInput.value);
     });
     
-    // Enter-Taste
     chatInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') sendeNachricht(chatInput.value);
     });
 
-    // Vorschlaege anklickbar machen
     vorschlaege.forEach(function(btn) {
         btn.addEventListener('click', function() {
             sendeNachricht(btn.dataset.question);
         });
     });
 
-    // Dark Mode
     var themeToggle = document.getElementById('theme-toggle');
     var gespeichertesTheme = localStorage.getItem('theme');
     
