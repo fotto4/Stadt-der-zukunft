@@ -1,12 +1,12 @@
 var wissensdatenbank = {
     smartcity: {
         keywords: ['smart city', 'smart cities', 'smartcity', 'smat city', 'smarte stadt', 'intelligente stadt', 'was ist', 'definition'],
-        antwort: '<strong>Was ist eine Smart City?</strong><br><br>Eine Smart City ist eine Stadt, die digitale Technologien und Datenanalyse nutzt, um:<br><br>- Die Lebensqualitat der Bewohner zu verbessern<br>- Ressourcen effizienter zu nutzen<br>- Umweltbelastungen zu reduzieren<br>- Stadtische Dienste zu optimieren<br><br>Sensoren, KI und vernetzte Systeme arbeiten zusammen, um die Stadt intelligenter zu machen.'
+        antwort: '<strong>Was ist eine Smart City?</strong><br><br>Eine Smart City ist eine Stadt, die digitale Technologien und Datenanalyse nutzt, um:<br><br>- Die Lebensqualitaet der Bewohner zu verbessern<br>- Ressourcen effizienter zu nutzen<br>- Umweltbelastungen zu reduzieren<br>- Staedtische Dienste zu optimieren<br><br>Sensoren, KI und vernetzte Systeme arbeiten zusammen, um die Stadt intelligenter zu machen.'
     },
 
     mobilitaet: {
         keywords: ['mobilitat', 'mobilität', 'verkehr', 'auto', 'autos', 'fahrzeug', 'fahrzeuge', 'transport', 'bus', 'bahn', 'autonom', 'selbstfahrend', 'e-auto', 'elektro', 'carsharing'],
-        antwort: '<strong>Intelligente Mobilitat</strong><br><br><strong>Autonome Fahrzeuge:</strong> Selbstfahrende Autos und Busse machen den Verkehr sicherer. Sie kommunizieren miteinander und vermeiden Unfalle.<br><br><strong>E-Mobilitat:</strong> Elektroautos, E-Bikes und E-Scooter reduzieren Emissionen und Larm. Ladestationen sind uberall verfugbar.<br><br><strong>Mobility-as-a-Service:</strong> Eine App fur alles - Bus, Bahn, Carsharing und Fahrrad kombiniert fur die optimale Route.<br><br><strong>Intelligente Ampeln:</strong> KI analysiert Verkehrsstrome und optimiert Ampelschaltungen, um Staus zu vermeiden.'
+        antwort: '<strong>Intelligente Mobilitaet</strong><br><br><strong>Autonome Fahrzeuge:</strong> Selbstfahrende Autos und Busse machen den Verkehr sicherer. Sie kommunizieren miteinander und vermeiden Unfalle.<br><br><strong>E-Mobilitat:</strong> Elektroautos, E-Bikes und E-Scooter reduzieren Emissionen und Larm. Ladestationen sind uberall verfugbar.<br><br><strong>Mobility-as-a-Service:</strong> Eine App fur alles - Bus, Bahn, Carsharing und Fahrrad kombiniert fur die optimale Route.<br><br><strong>Intelligente Ampeln:</strong> KI analysiert Verkehrsstrome und optimiert Ampelschaltungen, um Staus zu vermeiden.'
     },
 
     energie: {
