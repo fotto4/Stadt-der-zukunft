@@ -650,3 +650,8 @@ body {
 .chatbot-messages::-webkit-scrollbar { width: 6px; }
 .chatbot-messages::-webkit-scrollbar-track { background: transparent; }
 .chatbot-messages::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+
+.section {
+    text-decoration: none;
+    color: inherit;
+}
